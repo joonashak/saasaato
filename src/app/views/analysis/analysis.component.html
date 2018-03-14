@@ -1,0 +1,54 @@
+
+<h3>Analysis</h3>
+
+<p class="lead">
+  All times presented in your system's local timezone ({{ date | date:"O" }}).
+</p>
+
+<h4>Last 3 days</h4>
+
+<app-temperature-chart></app-temperature-chart>
+
+<div *ngIf="latestObservations">
+  <h4>Latest observations</h4>
+
+  <table class="table table-striped table-condensed">
+    <thead>
+    <tr>
+      <th>Location</th>
+      <th class="temperature">Temperature (°C)</th>
+      <th>Time ({{ date | date:"O" }})</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let observation of latestObservations">
+      <td>{{ observation.location.name }}</td>
+      <td class="temperature">{{ observation.temperature | number:"1.1-1" }}</td>
+      <td>{{ observation.date | date:"y-MM-dd HH:mm:ss" }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="temperatureRange24h">
+  <h4>Last 24 hours</h4>
+
+  <table class="table table-striped table-condensed">
+    <thead>
+    <tr>
+      <th>Location</th>
+      <th class="temperature">Min (°C)</th>
+      <th class="temperature">Max (°C)</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let range of temperatureRange24h">
+      <td>{{ range.name }}</td>
+      <td class="temperature">{{ range.min | number:"1.1-1" }}</td>
+      <td class="temperature">{{ range.max | number:"1.1-1" }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

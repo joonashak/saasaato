@@ -1,0 +1,68 @@
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.app-container {
+  max-width: 50rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+h4 {
+  margin-top: 2.4em;
+  margin-bottom: 1.6em;
+}
+
+.form-group {
+  padding-bottom: 0.4em;
+}
+
+.reset-widget-body {
+  font-size: 12px;
+}
+
+.alert-info {
+  border-color: #6b8bad;
+}
+
+.data-entry-alert {
+  color: #ff3b00;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: -15px;
+  margin-bottom: 5px;
+}
+
+.data-entry-input.ng-touched.ng-invalid {
+  border: 2px solid #ff3b00;
+}
+
+.table .temperature {
+  text-align: right;
+  padding-right: 2em;
+}
+
+.btn {
+  padding: 6px 20px;
+}
+
+.btn-series {
+  margin: 5px 7px;
+  padding: 6px 20px;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.chart-buttons {
+  text-align: center;
+  margin-top: 9px;
+}
+
+.lead {
+  font-size: 17px;
+  margin-bottom: 3rem;
+}

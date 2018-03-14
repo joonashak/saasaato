@@ -1,0 +1,15 @@
+
+<div *ngIf="chart">
+  <canvas id="canvas">{{ chart }}</canvas>
+
+  <div class="chart-buttons" *ngIf="chart.data">
+    <button
+      *ngFor="let series of chart.data.datasets; let i = index"
+      (click)="toggleDataVisibility(i)"
+      [ngStyle]="setStyle(i)"
+      class="btn btn-primary btn-series"
+    >
+      {{ series.label }}
+    </button>
+  </div>
+</div>

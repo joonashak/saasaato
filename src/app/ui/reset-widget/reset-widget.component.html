@@ -1,0 +1,12 @@
+
+<h5>This is a demo app</h5>
+
+<p class="reset-widget-body">
+  You can reset the database to include only computer-generated data from the past 7 days:
+</p>
+
+<p>
+  <button *ngIf="!loading && !loaded" class="btn btn-primary" (click)="reset()">Reset Database</button>
+  <button *ngIf="loading" class="btn btn-primary" disabled>Loading...</button>
+  <button *ngIf="loaded" class="btn btn-primary" (click)="reload()">Database reset, click to refresh page</button>
+</p>
